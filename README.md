@@ -88,11 +88,9 @@
 | ProcessInjection Techniques                                  | https://github.com/3xpl01tc0d3r/ProcessInjection             |
 | A Tale of Static Devirtualization(VTIL，较为有优势的反序列化方案) | https://0xnobody.github.io/devirtualization-intro/           |
 
-2. 
-
 ​		**备注**
 
-​		说实话，今年年初到现在，安全界最好的文章writeups 在我看来，应该归属于 google 安全员Ian beer的这篇文章(https://googleprojectzero.blogspot.com/2020/12/an-ios-zero-click-radio-proximity.html)，全文大概13500字左右，文章从协议，安全隐患，触发条件介绍的如此细腻，很值得国内的安全员学习下，不过国内的安全员貌似很多不愿分享，。。。。。😔
+​		说实话，今年年初到现在，安全界最好的文章writeups 在我看来，应该归属于 google 安全员Ian beer的[这篇文章](https://googleprojectzero.blogspot.com/2020/12/an-ios-zero-click-radio-proximity.html)，全文大概13500字左右，文章从协议，安全隐患，触发条件介绍的如此细腻，很值得国内的安全员学习下，不过国内的安全员貌似很多不愿分享，。。。。。😔
 
 ​		同时今年也开始接触部分CVE的了，主要是IOS＆Mac OSX这块，希望明年能够有一半时间用来搞CVE相关的安全事件吧，今年大部分时间献给了编译器了
 
