@@ -4,28 +4,28 @@
 
 # 编译器设计
 
-| ==名称==                                                     | ==Reference==                                                | ==简要说明==                                                 | ==个人注解==                                                 |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| make programming languages(interpreter)                      | http://craftinginterpreters.com/contents.html                | 包含了实现全功能、高效脚本语言所需的一切。你将学习到关于解析和语义的高级概念，以及诸如字节码表示和垃圾回收等具体细节 | 学习编译器(严格意义事解释器)的最优秀读本之一，入门级参考文献 |
-| The Secret Sauce in Efficient and Precise Static Analysis    | https://bodden.de/pubs/bodden18secret.pdf                    | 程序逻辑分析方法论(静态分析方案)                             | static-analysis一点都不稀奇，文章描述的方案一般性不强，仅供参考 |
-| Feral-(C++14写的编程语言解释器)                              | https://www.reddit.com/r/cpp/comments/fvkb66/a_programming_language_interpreter_in_c/ | Compiler ?? VM ??                                            | 只是稍微扫了下设计模式，有兴趣的可以自己看看                 |
-| libclang的使用与分析                                         | 1.https://www.youtube.com/watch?v=E6i8jmiy8MY<br>2.https://github.com/peter-can-talk/cppnow-2017 | RT                                                           | 需要构建特定的编译组件分析特定模式                           |
-| Challenging LR Parsing                                       | https://rust-analyzer.github.io/blog/2020/09/16/challeging-LR-parsing.html |                                                              | 不做过多解释，工作相关                                       |
-| A small C compiler                                           | https://github.com/rui314/chibicc                            |                                                              | 说实话，这个作者不知道是不是有点偏执，他还写了8cc,9cc等C编译器，看看设计逻辑倒是不错，不必要深究 |
-| PEG Parsing Series Overview(Python之父的解析器分析)          | https://medium.com/@gvanrossum_83706/peg-parsing-series-de5d41b2ed60 |                                                              | 不做过多解释，编译器Parser                                   |
-| Simple but Powerful Pratt Parsing                            | 1. https://matklad.github.io/2020/04/13/simple-but-powerful-pratt-parsing.html<br>2. https://www.reddit.com/r/ProgrammingLanguages/comments/j8f9i3/what_are_some_great_resources_for_building_your/ |                                                              | 不做过多解释，编译器Parser                                   |
-| On Symbolic Execution of Decompiled Programs                 | 1. https://qrs20.techconf.org/QRS2020_FULL/pdfs/QRS2020-4LGdOos7NAbR8M2s6S6ezE/891300a265/891300a265.pdf<br>2. https://divine.fi.muni.cz/2020/decompile/ |                                                              | 符号执行是趋势，既方便应用程序测试，也方便反编译程序分析，动态调试也能从中获取相关有用的信息 |
-| A self-hosting and educational C compiler                    | https://github.com/jserv/shecc                               |                                                              | 我也不知道为啥看了这么多C的编译器，不过就是觉得好玩，而且每个作者的思路都是不一样的，不错。。。 |
-| C++ parser combinator library                                | https://github.com/foonathan/lexy                            |                                                              | 相较于flex与bison，或者boost 的Spirit框架，我更喜欢这个作者的思路,DSL |
-| A Complete Guide to LLVM for Programming Language Creators   | https://mukulrathi.co.uk/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/ |                                                              | 相较于官方的LLVM组件例子，这个例子稍微深一点，还是蛮不错的教程 |
-| **TCC & QuickJS**                                            | 1. https://bellard.org/quickjs/<br>2. https://bellard.org/tcc/ |                                                              | ***阅读分析了很多小型Toy编译器，但是给我影响最深的莫属这两个了，作者的testsuites做的很好，逻辑设计也是极棒的*** |
-| A Compiler Writing Journey                                   | 1. https://github.com/DoctorWkt/acwj<br>2. https://news.ycombinator.com/item?id=21968420 |                                                              | C Compiler From Scratch,C 语言编译器分析                     |
-| CirCle Language Compiler                                     | https://github.com/seanbaxter/circle                         |                                                              | 自己备用看的设计逻辑                                         |
-| Janet: a lightweight, expressive and modern Lisp             | 1. https://news.ycombinator.com/item?id=23164614<br>2. https://janet-lang.org/ |                                                              | Lisp 方言最佳实践方案之一，优秀                              |
-| Pratt Parsers: Expression Parsing Made Easy                  | http://journal.stuffwithstuff.com/2011/03/19/pratt-parsers-expression-parsing-made-easy/ |                                                              |                                                              |
-| Parsing Expression Grammar Template Library                  | https://github.com/taocpp/PEGTL                              |                                                              | Parsing Expression Generator                                 |
-| Using LLVM to Prevent Objective-C Swizzling Through Devirtualization | https://tech.guardsquare.com/posts/objc-methodcall-lowering/ |                                                              | Objective-C Swizzling                                        |
-| Adding PoisonValue for representing poison value explicitly in IR | https://github.com/llvm/llvm-project/commit/75f50e15bf8fff6fba1d4678adedd33ef6a945e5 |                                                              | LLVM 组件的IR PoisonValue设计(注意无关编译)                  |
+| ==名称==                                                     | ==Reference==                                                |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| make programming languages(interpreter)                      | http://craftinginterpreters.com/contents.html                |
+| The Secret Sauce in Efficient and Precise Static Analysis    | https://bodden.de/pubs/bodden18secret.pdf                    |
+| Feral-(C++14写的编程语言解释器)                              | https://www.reddit.com/r/cpp/comments/fvkb66/a_programming_language_interpreter_in_c/ |
+| libclang的使用与分析                                         | 1.https://www.youtube.com/watch?v=E6i8jmiy8MY<br>2.https://github.com/peter-can-talk/cppnow-2017 |
+| Challenging LR Parsing                                       | https://rust-analyzer.github.io/blog/2020/09/16/challeging-LR-parsing.html |
+| A small C compiler                                           | https://github.com/rui314/chibicc                            |
+| PEG Parsing Series Overview(Python之父的解析器分析)          | https://medium.com/@gvanrossum_83706/peg-parsing-series-de5d41b2ed60 |
+| Simple but Powerful Pratt Parsing                            | 1. https://matklad.github.io/2020/04/13/simple-but-powerful-pratt-parsing.html<br>2. https://www.reddit.com/r/ProgrammingLanguages/comments/j8f9i3/what_are_some_great_resources_for_building_your/ |
+| On Symbolic Execution of Decompiled Programs                 | 1. https://qrs20.techconf.org/QRS2020_FULL/pdfs/QRS2020-4LGdOos7NAbR8M2s6S6ezE/891300a265/891300a265.pdf<br>2. https://divine.fi.muni.cz/2020/decompile/ |
+| A self-hosting and educational C compiler                    | https://github.com/jserv/shecc                               |
+| C++ parser combinator library                                | https://github.com/foonathan/lexy                            |
+| A Complete Guide to LLVM for Programming Language Creators   | https://mukulrathi.co.uk/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/ |
+| **TCC & QuickJS**                                            | 1. https://bellard.org/quickjs/<br>2. https://bellard.org/tcc/ |
+| A Compiler Writing Journey                                   | 1. https://github.com/DoctorWkt/acwj<br>2. https://news.ycombinator.com/item?id=21968420 |
+| CirCle Language Compiler                                     | https://github.com/seanbaxter/circle                         |
+| Janet: a lightweight, expressive and modern Lisp             | 1. https://news.ycombinator.com/item?id=23164614<br>2. https://janet-lang.org/ |
+| Pratt Parsers: Expression Parsing Made Easy                  | http://journal.stuffwithstuff.com/2011/03/19/pratt-parsers-expression-parsing-made-easy/ |
+| Parsing Expression Grammar Template Library                  | https://github.com/taocpp/PEGTL                              |
+| Using LLVM to Prevent Objective-C Swizzling Through Devirtualization | https://tech.guardsquare.com/posts/objc-methodcall-lowering/ |
+| Adding PoisonValue for representing poison value explicitly in IR | https://github.com/llvm/llvm-project/commit/75f50e15bf8fff6fba1d4678adedd33ef6a945e5 |
 
 ## 编译器岗位面试(个人认为这些能很好地评估编译器相干知识掌握情况)
 
@@ -39,27 +39,27 @@
 
 # C++&C 优秀代码分析
 
-| ==代码简介==                                                 | ==链接==                                                     | ==个人见解==                                                 |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 使用C语言的预处理器构建解释器                                | https://github.com/Ferdi265/preprocessor_brainfuck           | 思想蛮新颖的，不过不建议玩，毕竟预处理器指令不好玩，😄        |
-| Evaluating user defined logical Expressions                  | https://github.com/m-peko/booleval                           | C++17/库比较小巧，逻辑表达式的代码判定比较有用               |
-| C++17 vs C++20                                               | http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/p2131r0.html | C++20最大的优势就是引入了Concept概念，给Templates增添了更多的神秘色彩 |
-| ModernCppStarter                                             | https://github.com/TheLartians/ModernCppStarter              | 基于CMAKE的C++ project 模板工程，不用说，很好用就行了，因为长期使用Emacs做安全研究与代码开发 |
-| Performance benefits of likely/unlikely and such             | 1. https://www.reddit.com/r/cpp/comments/ap12od/performance_benefits_of_likelyunlikely_and_such/<br>2. https://stackoverflow.com/questions/1851299/is-it-possible-to-tell-the-branch-predictor-how-likely-it-is-to-follow-the-branc/1851445#1851445<br>3.  https://www.realworldtech.com/forum/?threadid=189711&curpostid=189723 | 说实话，写C的预处理指令时，也不知道为啥Linux 老手都喜欢这个东西，反正跟风呗，自己也尝试用了下 |
-| Higher level programming in C                                | 1. https://github.com/orangeduck/Cello<br>2. http://libcello.org/learn/a-fat-pointer-library | 暂时还没用，贴出来等待查验                                   |
-| Fast sorted collections for Swift using in-memory B-trees    | https://github.com/attaswift/BTree                           | 为数不多的swift的优秀库，虽然swift研究的不多，但是语言设计绝壁足够优秀 |
-| C++17 & C++ 20 error-handling and utility extensions         | https://github.com/lamarrr/STX                               | Error-Handling and Utility Extensions                        |
-| A collection of improved binary search algorithms.           | 1. https://github.com/scandum/binary_search<br>2. https://news.ycombinator.com/item?id=23893366 | Binary Search的性能提升比较                                  |
-| C++ Memory Allocator设计                                     | http://dmitrysoshnikov.com/compilers/writing-a-memory-allocator/ |                                                              |
-| Writing a custom iterator in modern C++                      | https://internalpointers.com/post/writing-custom-iterators-modern-cpp | Iterator 设计(C++ Version)                                   |
-| Pointers Are Complicated, or: What's in a Byte?              | https://www.ralfj.de/blog/2018/07/24/pointers-and-bytes.html | Pointers(Rust vs C 语言)                                     |
-| A library implementing different string similarity and distance measures using Python | https://github.com/luozhouyang/python-string-similarity#python-string-similarity | string 相似度计算(python版)，C++对应版本更新                 |
-| Nameof operator for modern C++, simply obtain the name of a variable, type, function, macro, and enum | https://github.com/Neargye/nameof                            | C++ Macros使用                                               |
-| Generating random numbers                                    | https://codingnest.com/generating-random-numbers-using-c-standard-library-the-problems/ | C++ PCG 使用，可与openssl库对比                              |
-| Lock-Free Queue                                              | https://www.codeproject.com/articles/43510/lock-free-single-producer-single-consumer-circular | C++实例，简单扫一下即可                                      |
-| An introduction to C++'s SFINAE concept: compile-time introspection of a class member | http://jguegant.github.io/blogs/tech/sfinae-introduction.html | C++ SFINAE 最佳指南                                          |
-| A quick primer on type traits in modern C++                  | https://www.internalpointers.com/post/quick-primer-type-traits-modern-cpp | Type Trait                                                   |
-| Allocators and an Inclusive STL                              | https://thephd.github.io/freestanding-noexcept-allocators-vector-memory-hole | STL Compatible Malloctor                                     |
+| ==代码简介==                                                 | ==链接==                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 使用C语言的预处理器构建解释器                                | https://github.com/Ferdi265/preprocessor_brainfuck           |
+| Evaluating user defined logical Expressions                  | https://github.com/m-peko/booleval                           |
+| C++17 vs C++20                                               | http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/p2131r0.html |
+| ModernCppStarter                                             | https://github.com/TheLartians/ModernCppStarter              |
+| Performance benefits of likely/unlikely and such             | 1. https://www.reddit.com/r/cpp/comments/ap12od/performance_benefits_of_likelyunlikely_and_such/<br>2. https://stackoverflow.com/questions/1851299/is-it-possible-to-tell-the-branch-predictor-how-likely-it-is-to-follow-the-branc/1851445#1851445<br>3.  https://www.realworldtech.com/forum/?threadid=189711&curpostid=189723 |
+| Higher level programming in C                                | 1. https://github.com/orangeduck/Cello<br>2. http://libcello.org/learn/a-fat-pointer-library |
+| Fast sorted collections for Swift using in-memory B-trees    | https://github.com/attaswift/BTree                           |
+| C++17 & C++ 20 error-handling and utility extensions         | https://github.com/lamarrr/STX                               |
+| A collection of improved binary search algorithms.           | 1. https://github.com/scandum/binary_search<br>2. https://news.ycombinator.com/item?id=23893366 |
+| C++ Memory Allocator设计                                     | http://dmitrysoshnikov.com/compilers/writing-a-memory-allocator/ |
+| Writing a custom iterator in modern C++                      | https://internalpointers.com/post/writing-custom-iterators-modern-cpp |
+| Pointers Are Complicated, or: What's in a Byte?              | https://www.ralfj.de/blog/2018/07/24/pointers-and-bytes.html |
+| A library implementing different string similarity and distance measures using Python | https://github.com/luozhouyang/python-string-similarity#python-string-similarity |
+| Nameof operator for modern C++, simply obtain the name of a variable, type, function, macro, and enum | https://github.com/Neargye/nameof                            |
+| Generating random numbers                                    | https://codingnest.com/generating-random-numbers-using-c-standard-library-the-problems/ |
+| Lock-Free Queue                                              | https://www.codeproject.com/articles/43510/lock-free-single-producer-single-consumer-circular |
+| An introduction to C++'s SFINAE concept: compile-time introspection of a class member | http://jguegant.github.io/blogs/tech/sfinae-introduction.html |
+| A quick primer on type traits in modern C++                  | https://www.internalpointers.com/post/quick-primer-type-traits-modern-cpp |
+| Allocators and an Inclusive STL                              | https://thephd.github.io/freestanding-noexcept-allocators-vector-memory-hole |
 
 # Sec 安全好文
 
