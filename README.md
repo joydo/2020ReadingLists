@@ -26,6 +26,7 @@
 | Parsing Expression Grammar Template Library                  | https://github.com/taocpp/PEGTL                              |
 | Using LLVM to Prevent Objective-C Swizzling Through Devirtualization | https://tech.guardsquare.com/posts/objc-methodcall-lowering/ |
 | Adding PoisonValue for representing poison value explicitly in IR | https://github.com/llvm/llvm-project/commit/75f50e15bf8fff6fba1d4678adedd33ef6a945e5 |
+| Query-based compiler architectures |https://ollef.github.io/blog/posts/query-based-compilers.html|
 
 ## 编译器岗位面试(个人认为这些能很好地评估编译器相干知识掌握情况)
 
